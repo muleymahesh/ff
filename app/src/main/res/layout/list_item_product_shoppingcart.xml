@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        card_view:cardUseCompatPadding="true"
+        android:background="@drawable/rectangle">
+
+    <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+        android:background="@drawable/rectangle"
+        android:src="@drawable/rectangle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/rectangle"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Title_1"
+                android:maxLines="2"
+                android:textAllCaps="false"
+                android:textColor="@color/app_text"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txtRs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/title1"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/app_text_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/txtRs"
+                android:layout_below="@id/title1"
+                android:layout_marginTop="10dp"
+                android:text="Rs. 57"
+                android:textColor="@color/app_text_secondary"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/btnMinus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/title1"
+                android:layout_toLeftOf="@id/quantity"
+                android:src="@drawable/minus"
+                android:scaleType="centerInside"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="10"
+                android:textColor="@color/app_text"
+                android:textSize="10sp"
+                android:textStyle="bold"
+
+                android:layout_alignBottom="@+id/txtRs"
+                android:layout_toLeftOf="@+id/btnPlus"
+                android:layout_toStartOf="@+id/btnPlus"
+                android:layout_below="@+id/title1"
+                android:gravity="center_vertical"
+                android:padding="3dp" />
+
+            <ImageView
+                android:id="@+id/btnPlus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/title1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/plus"
+                android:scaleType="centerInside"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:padding="4dp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/btnDel"
+        android:layout_gravity="right|top"
+        android:background="@drawable/delete"
+        android:layout_margin="4dp" />
+</FrameLayout>

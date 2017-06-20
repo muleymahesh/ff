@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.maks.farmfresh24">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".SplashScreen"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MyOrdersActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_my_orders"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MyCartActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_my_cart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PlaceOrderActivity"
+            android:configChanges="orientation"
+            android:label="Place order"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProductListActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_product_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+        </activity>
+        <activity
+            android:name=".ProductDetailScreenActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_product_detail_screen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:label="@string/title_activity_registration" />
+        <activity android:name=".AddressActivity" />
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".ContactUsActivity" />
+        <activity android:name=".FeedbackActivity" />
+        <activity android:name=".ForgotPassActivity" />
+        <activity android:name=".PasswordResetActivity" />
+        <activity android:name=".SearchResultsActivity">
+
+            <!-- to identify this activity as "searchable" -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".MyWalletActivity1"
+            android:label="@string/title_activity_my_wallet"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MyWalletActivity"
+            android:label="@string/title_activity_my_wallet"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".MyOrderDetailsActivity" />
+        <activity
+            android:name=".ccavenuepayment.WebViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ccavenuepayment.StatusActivity"
+            android:label="@string/title_activity_status" />
+
+        <receiver android:name=".ccavenuepayment.SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

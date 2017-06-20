@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.maks.farmfresh24.ServiceDetailActivity"
+    android:orientation="vertical"
+    android:background="#FFF">
+
+    <include layout="@layout/toolbar" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFF">
+
+
+                <TextView
+                    android:id="@+id/doc_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Doctor Name"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/app_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/doc_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Address: "
+                        android:textColor="@color/app_background" />
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Address"
+                        android:textColor="@color/app_background" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/contact_no_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Contact: "
+                        android:textColor="@color/app_background" />
+                    <ImageView
+                        android:id="@+id/imgCall"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="4dp"
+                        android:src="@android:drawable/sym_action_call"/>
+                    <TextView
+                        android:id="@+id/contact_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:autoLink="phone"
+                        android:text="Contact"
+                        android:textColor="@color/app_background" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Facilities: "
+                        android:textColor="@color/app_background" />
+                    <TextView
+                        android:id="@+id/detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Contact"
+                        android:textColor="@color/app_background" />
+                </LinearLayout>
+            </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="Disclaimer : "
+        android:textColor="@color/app_background"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView android:layout_height="wrap_content" android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:text="The Services section on our app is based on reviews from other users and is for assistance for its customers only. FarmFresh24 in no way guarantees the services provided by the respective service providers. All customers are expected, themselves make necessary inquiries before availing their services. In case of complaints, issues please contact the respective service provider directly."
+        android:layout_margin="10dp" />
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
